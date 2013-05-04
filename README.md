@@ -1,5 +1,4 @@
-klatin
-======
+# klatin
 
 Enumerate k-latin squares of order n.
 
@@ -18,3 +17,7 @@ Then:
     make
     cd ..
     ./compile
+
+# TODO
+
+http://rosettacode.org/wiki/Combinations#C.2B.2B

@@ -1485,36 +1485,29 @@ lazy:
     MPI::Finalize();
 
     return 0;
+}
 
 #if 0
+int main()
+{
     int n = 4;
     int k = 4;
 
     klatin_dfs d(n, k);
 
-    while(d.dfs_stack()) {
-        if (is_separable(d.K, n, k, 2) && !is_reducible(d.K, n, k)) {
-            std::cout << "klatin:" << std::endl;
-            print_klatin(d.K, n);
+    unsigned long long nr = 0;
 
-            std::cout << "separable: " << is_separable(d.K, n, k, 2) << std::endl;
-            std::cout << "reducible: " << is_reducible(d.K, n, k) << std::endl;
-            std::cout << std::endl;
-            break;
-        }
+    while(d.dfs_stack()) {
+        // std::cout << "klatin:" << std::endl;
+        // print_klatin(d.K, n);
+        nr++;
     }
 
-    //std::cout << std::endl;
-    //std::cout << std::endl;
-    //std::cout << std::endl;
-    //std::cout << std::endl;
+    std::cout << nr << std::endl;
 
-    //std::cout << "klatin:" << std::endl;
-    //print_klatin(d.K, n);
-
-    //is_reducible(d.K, n, k);
+    return 0;
+}
 #endif
-
 
 #if 0
     int n = 4;
@@ -1559,9 +1552,4 @@ lazy:
  
     return 0;
 #endif
-}
-
-
-
-
 
