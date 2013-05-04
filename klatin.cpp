@@ -16,23 +16,6 @@
 */
 
 
-/* To compile this file:
-
-Visit http://www.boost.org/ and download the Boost library. Unpack
-it somewhere.
-
-Unpack nauty24b7 in the current directory, then:
-
-$ cd nauty24b7
-$ ./configure
-$ make
-$ cd ..
-$ g++ -I /path_to_boost_1_37_0/ nauty24b7/nauty.o nauty24b7/nautil.o nauty24b7/naututil.o nauty24b7/rng.o nauty24b7/naugraph.o nauty24b7/naugroup.o klatin.cpp
-
-*/
-
-#include "mpicxx.h"
-
 #include <string>
 #include <cassert>
 #include <iostream>
@@ -49,30 +32,10 @@ $ g++ -I /path_to_boost_1_37_0/ nauty24b7/nauty.o nauty24b7/nautil.o nauty24b7/n
 #include <boost/random/uniform_int.hpp>
 #include <boost/random/uniform_real.hpp>
 #include <boost/random/variate_generator.hpp>
-#include "nauty24b7/nauty.h"
-#include "nauty24b7/naugroup.h"
-#include "nauty24b7/naututil.h"
-
-
-
-#if 0
-// from   http://snipplr.com/view/5907/stdrandomshuffle-and-boostrandomhpp/
-class Random
-{
-public:
-boost::mt19937 gen;
-boost::uniform_int<int> dst;
-boost::variate_generator< boost::mt19937, boost::uniform_int<int> > rand;
-Random( int N ):// call instance:
-gen( static_cast<unsigned long>(std::time(0)) ), dst( 0, N ), rand( gen, dst ) {
-}
-std::ptrdiff_t operator()( std::ptrdiff_t arg ) {
-return static_cast< std::ptrdiff_t >( rand() );
-}
-};
-
-Random rnd(4);
-#endif
+#include <mpi.h>
+#include "nauty25r2/nauty.h"
+#include "nauty25r2/naugroup.h"
+#include "nauty25r2/naututil.h"
 
 #define ESTIMATE_SIZE 0
 boost::mt19937 rng;

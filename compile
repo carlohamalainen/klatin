@@ -1,1 +1,1 @@
-mpic++ $CFLAGS -I /home/carlo/boost_1_37_0/ $HOME/nauty24b7/nauty.o $HOME/nauty24b7/nautil.o $HOME/nauty24b7/naututil.o $HOME/nauty24b7/rng.o $HOME/nauty24b7/naugraph.o $HOME/nauty24b7/naugroup.o klatin.cpp -o klatin
+mpicxx $CFLAGS nauty25r2/nauty.o nauty25r2/nautil.o nauty25r2/naututil.o nauty25r2/naugraph.o nauty25r2/naugroup.o nauty25r2/schreier.o nauty25r2/naurng.o nauty25r2/nausparse.o klatin.cpp -o klatin
