@@ -45,9 +45,9 @@ it is necessary to check they are correct.
 #endif
 
 /* Support of gcc extensions __builtin_clz, __builtin_clzl, __builtin_clzll */
-#define HAVE_CLZ 0
-#define HAVE_CLZL 0
-#define HAVE_CLZLL 0
+#define HAVE_CLZ 1
+#define HAVE_CLZL 1
+#define HAVE_CLZLL 1
 
 /*==================================================================*/
 
@@ -436,7 +436,7 @@ typedef unsigned long nauty_counter;
 #endif
 #define PRINT_COUNTER(f,x) fprintf(f,COUNTER_FMT,x)
 
-#define NAUTYVERSIONID (25480+HAVE_TLS)  /* 10000*version + HAVE_TLS */
+#define NAUTYVERSIONID (25490+HAVE_TLS)  /* 10000*version + HAVE_TLS */
 #define NAUTYREQUIRED NAUTYVERSIONID  /* Minimum compatible version */
 
 #if WORDSIZE==16

@@ -138,6 +138,7 @@ extern long listhash(int*,int,long);
 extern void mathon(graph*,int,int,graph*,int,int);
 extern void mathon_sg(sparsegraph*,sparsegraph*);
 extern void naututil_check(int,int,int,int);
+extern void naututil_freedyn(void);
 extern void putcanon(FILE*,int*,graph*,int,int,int);
 extern void putcanon_sg(FILE*,int*,sparsegraph*,int);
 extern void putdegs(FILE*,graph*,int,int,int);
